@@ -5,7 +5,7 @@ A powerful brute-force tool designed specifically for decrypting Solar-PuTTY .da
 
 ## Features
 
-- **Dynamic Password Generation**: Supports custom base patterns with dynamic parts (e.g., `12**24nzC!r0c%q12`).
+- **Dynamic Password Generation**: Supports custom base patterns with dynamic parts (e.g., `est**`).
 - **Multithreading**: Utilizes multiple threads to maximize brute-force speed.
 - **Real-Time Progress Tracking**: Displays attempts, speed, and estimated remaining time.
 - **Targeted for `.dat` Files**: Specifically designed for decrypting Solar-PuTTY session backups.
@@ -54,7 +54,7 @@ python puttykeycrack.py --file FILE --pattern PATTERN [--dynamic-length DYNAMIC_
 Decrypt a file with a base pattern and default settings:
 
  ```bash
-python brute_force.py --file sessions-backup.dat --pattern "12**24nzC!r0c%q12"
+python brute_force.py --file sessions-backup.dat --pattern "est**"
    ```
 
 2. Custom Dynamic Length
@@ -62,7 +62,7 @@ python brute_force.py --file sessions-backup.dat --pattern "12**24nzC!r0c%q12"
 Set the dynamic part of the password to 6 characters:
 
  ```bash
-python brute_force.py --file sessions-backup.dat --pattern "12**24nzC!r0c%q12" --dynamic-length 6
+python brute_force.py --file sessions-backup.dat --pattern "est**" --dynamic-length 6
    ```
 
 3. Multithreading
@@ -70,7 +70,7 @@ python brute_force.py --file sessions-backup.dat --pattern "12**24nzC!r0c%q12" -
 Use 8 threads for faster processing:
 
 ```bash
-python brute_force.py --file sessions-backup.dat --pattern "12**24nzC!r0c%q12" --threads 8
+python brute_force.py --file sessions-backup.dat --pattern "est**" --threads 8
 ```
 
 ## Output
@@ -86,8 +86,8 @@ Progress: 3456/1679616 (0.21%) | Speed: 453.21 attempts/sec | Remaining time: 35
 If a password is found:
 
 ```bash
-Password found!: 12ab24nzC!r0c%q12
-{"Username":"root","Password":"12ab24nzC!r0c%q12"}
+Password found!: est**
+{"Username":"root","Password":"est**"}
 Process completed successfully.
 ```
 
